@@ -1,0 +1,32 @@
+{
+  "name": "flitic",
+  "version": "1.0.0",
+  "description": "demo ecommerce website",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=development DEBUG=app:* nodemon app",
+    "start:ci": "DEBUG=app:* node app",
+    "test:ci": "NODE_ENV=test jest --verbose --ci --detectOpenHandles --forceExit",
+    "test:dev": "NODE_ENV=test jest --watchAll --verbose"
+  },
+  "keywords": [],
+  "author": "Ahmed Atia",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "config": "^3.0.0",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "express-async-errors": "^3.1.1",
+    "http-errors": "^1.7.1",
+    "joi": "^14.3.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.14",
+    "morgan": "^1.9.1",
+    "winston": "^3.1.0"
+  },
+  "devDependencies": {
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  }
+}

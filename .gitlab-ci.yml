@@ -1,0 +1,24 @@
+image: node:latest
+
+stages:
+- build
+- test
+
+cache:
+  paths:
+  - node_modules/
+
+install dependencies:
+  stage: build
+  script:
+  - npm install
+  artifacts:
+    paths:
+    - node_modules/
+
+run my test:
+  stage: test
+  services:
+  - mongo:4
+  script:
+  - npm run test:ci
